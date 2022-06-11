@@ -1,14 +1,14 @@
 root = true
 
-[*]
-indent_style = space
-end_of_line = lf
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
+[*] # 所有文件适用
+indent_style = space # 缩进风格
+end_of_line = lf # 换行符
+charset = utf-8 # 文件编码
+trim_trailing_whitespace = true # 去除文件末尾的空格
+insert_final_newline = true # 文件末尾添加换行符
 
-[*.md]
-trim_trailing_whitespace = false
+[*.md] # *.md 文件适用
+trim_trailing_whitespace = false # 去除文件末尾的空格
 
 [*.{ts,js,vue,css}]
-indent_size = 2
+indent_size = 2 # 缩进大小

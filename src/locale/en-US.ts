@@ -13,7 +13,7 @@ import localeLogin from '@/views/auth/login/locale/en-US';
 // import localeMultiDAnalysis from '@/views/visualization/multi-dimension-data-analysis/locale/en-US';
 // import localeSearchTable from '@/views/list/search-table/locale/en-US';
 // /** simple end */
-// import localeSettings from './en-US/settings';
+import localeSettings from './en-US/settings';
 // import localeStepForm from '@/views/form/step/locale/en-US';
 // import localeSuccess from '@/views/result/success/locale/en-US';
 // import localeUserInfo from '@/views/user/info/locale/en-US';
@@ -36,7 +36,7 @@ export default {
   'menu.faq': 'FAQ',
   'navbar.docs': 'Docs',
   'navbar.action.locale': 'Switch to English',
-  //   ...localeSettings,
+  ...localeSettings,
   //   ...localeMessageBox,
   ...localeLogin,
   //   ...localeWorkplace,

@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 
-import { HttpResponse } from '@/types/global';
+import { HttpResponse } from './global';
 import { Notification } from '@arco-design/web-vue';
 import { getToken } from '@/utils/auth';
 

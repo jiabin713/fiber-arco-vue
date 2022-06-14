@@ -37,18 +37,19 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive } from 'vue';
+import { reactive } from 'vue';
 import { useRouter } from 'vue-router';
 import { Message } from '@arco-design/web-vue';
 import { FieldRule, ValidatedError } from '@arco-design/web-vue/es/form/interface';
 import { useI18n } from 'vue-i18n';
 import { useUserStore } from '@/store';
 import { useLoading } from '@/hooks/useLoading';
-import { LoginRequest } from '@/types/auth';
+import { useState } from '@/hooks/useState';
+import { LoginRequest } from '@/api/auth/type';
 
 const router = useRouter();
 const { t } = useI18n();
-const errorMessage = ref('');
+const [errorMessage, setErrorMessage] = useState<string>('');
 const { loading, setLoading } = useLoading();
 const userStore = useUserStore();
 
@@ -83,7 +84,7 @@ const handleSubmit = async ({
       });
       Message.success(t('login.form.login.success'));
     } catch (err) {
-      errorMessage.value = (err as Error).message;
+      setErrorMessage((err as Error).message);
     } finally {
       setLoading(false);
     }

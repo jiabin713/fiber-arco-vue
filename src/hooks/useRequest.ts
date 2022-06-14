@@ -1,7 +1,7 @@
 import { UnwrapRef, ref } from 'vue';
 
 import { AxiosResponse } from 'axios';
-import { HttpResponse } from '@/types/global';
+import { HttpResponse } from '@/api/global';
 import { useLoading } from './useLoading';
 
 // use to fetch list

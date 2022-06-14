@@ -11,3 +11,9 @@ export interface PageResponse<T = any> {
   pageSize: number;
   total: number;
 }
+
+export enum MenuType {
+  CATE = 'catalog',
+  MENU = 'menu',
+  BUTTON = 'button',
+}

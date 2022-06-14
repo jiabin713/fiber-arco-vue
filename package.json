@@ -50,5 +50,21 @@
     "vite-svg-loader": "^3.3.0",
     "vue-tsc": "^0.34.7",
     "windicss": "^3.5.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "prettier --write",
+      "npm run lint:fix",
+      "git add ."
+    ],
+    "*.{html,vue,vss,sass,less}": [
+      "npm run stylelint:fix",
+      "git add ."
+    ]
   }
 }

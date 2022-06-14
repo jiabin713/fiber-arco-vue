@@ -1,6 +1,6 @@
-import { LoginRequest, LoginResponse } from '@/types/auth';
+import { LoginRequest, LoginResponse } from './types';
 
-import request from './request';
+import request from '@/api/request';
 
 const URL = '/auth';
 
@@ -20,4 +20,8 @@ export const login = async (data: Partial<LoginRequest>): Promise<LoginResponse>
 
 export const logout = async () => {
   return request.post(`${URL}/logout`);
+};
+
+export const queryUserInfo = async () => {
+  return request.get(`${URL}/info`);
 };

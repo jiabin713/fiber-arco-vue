@@ -1,11 +1,10 @@
 import { RouteRecordRaw, createRouter, createWebHistory, useRoute } from 'vue-router';
 
 import dashboard from './modules/dashboard';
-
-// 关于单层路由，meta 中设置 { single: true } 即可为单层路由，{ hidden: true } 即可在侧边栏隐藏该路由
+import exception from './modules/exception';
 
 // 存放动态路由
-export const asyncRouterList: Array<RouteRecordRaw> = [...dashboard];
+export const asyncRouterList: Array<RouteRecordRaw> = [dashboard, exception];
 
 // 存放固定的路由
 const defaultRouterList: Array<RouteRecordRaw> = [
@@ -19,26 +18,14 @@ const defaultRouterList: Array<RouteRecordRaw> = [
     redirect: '/dashboard/workplace',
     component: () => import('@/layouts/blank-layout/index.vue'),
   },
-  // {
-  //   path: '/:w+',
-  //   name: '404Page',
-  //   redirect: '/result/404',
-  // },
+  {
+    path: '/:w+',
+    name: '404Page',
+    redirect: '/exception/404',
+  },
 ];
 
 export const allRoutes = [...defaultRouterList, ...asyncRouterList];
-
-export const getActive = (maxLevel = 2): string => {
-  const route = useRoute();
-  if (!route.path) {
-    return '';
-  }
-  return route.path
-    .split('/')
-    .filter((_item: string, index: number) => index <= maxLevel && index > 0)
-    .map((item: string) => `/${item}`)
-    .join('');
-};
 
 const router = createRouter({
   history: createWebHistory(),

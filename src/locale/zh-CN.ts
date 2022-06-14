@@ -13,7 +13,7 @@ import localeLogin from '@/views/auth/login/locale/zh-CN';
 // import localeMultiDAnalysis from '@/views/visualization/multi-dimension-data-analysis/locale/zh-CN';
 // import localeSearchTable from '@/views/list/search-table/locale/zh-CN';
 // /** simple end */
-// import localeSettings from './zh-CN/settings';
+import localeSettings from './zh-CN/settings';
 // import localeStepForm from '@/views/form/step/locale/zh-CN';
 // import localeSuccess from '@/views/result/success/locale/zh-CN';
 // import localeUserInfo from '@/views/user/info/locale/zh-CN';
@@ -36,7 +36,7 @@ export default {
   'menu.faq': '常见问题',
   'navbar.docs': '文档中心',
   'navbar.action.locale': '切换为中文',
-  //   ...localeSettings,
+  ...localeSettings,
   //   ...localeMessageBox,
   ...localeLogin,
   //   ...localeWorkplace,

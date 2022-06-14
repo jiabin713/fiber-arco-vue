@@ -189,8 +189,6 @@ const setDropDownVisible = () => {
   });
   triggerBtn.value.dispatchEvent(event);
 };
-
-const toggleDrawerMenu = inject('toggleDrawerMenu');
 </script>
 
 <style scoped lang="less">
